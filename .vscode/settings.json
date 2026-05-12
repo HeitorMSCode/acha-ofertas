@@ -1,0 +1,24 @@
+{
+    "python.defaultInterpreterPath": "c:\\Users\\heito\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 17,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "workbench.colorTheme": "Dracula Theme",
+}
