@@ -1,14 +1,21 @@
-FROM python:3.11.3-alpine3.17
+FROM python:3.11-alpine
 LABEL mantainer="heitormcampos56@gmail.com"
 
 # Essa variável de ambiente é usada para controlar se o Python deve 
 # gravar arquivos de bytecode (.pyc) no disco. 1 = Não, 0 = Sim
-ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONDONTWRITEBYTECODE=1
 
 # Define que a saída do Python será exibida imediatamente no console ou em 
 # outros dispositivos de saída, sem ser armazenada em buffer.
 # Em resumo, você verá os outputs do Python em tempo real.
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED=1
+
+# Dependências do sistema (ESSENCIAL no Alpine)
+RUN apk add --no-cache netcat-openbsd
+RUN apk add --no-cache \
+    build-base \
+    postgresql-dev \
+    musl-dev
 
 # Copia a pasta "djangoapp" e "scripts" para dentro do container.
 COPY djangoapp /djangoapp

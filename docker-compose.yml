@@ -15,6 +15,8 @@ services:
       - ./dotenv_files/.env
     depends_on:
       - psql
+    restart: always
+
   psql:
     container_name: psql
     image: postgres:13-alpine
@@ -22,3 +24,4 @@ services:
       - ./data/postgres/data:/var/lib/postgresql/data/
     env_file:
       - ./dotenv_files/.env
+    restart: always

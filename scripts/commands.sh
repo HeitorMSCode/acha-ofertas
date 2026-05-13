@@ -3,6 +3,9 @@
 # O shell irá encerrar a execução do script quando um comando falhar
 set -e
 
+: "${POSTGRES_HOST:?POSTGRES_HOST not set}"
+: "${POSTGRES_PORT:?POSTGRES_PORT not set}"
+
 while ! nc -z $POSTGRES_HOST $POSTGRES_PORT; do
   echo "🟡 Waiting for Postgres Database Startup ($POSTGRES_HOST $POSTGRES_PORT) ..."
   sleep 2
