@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': os.getenv('DB_ENGINE', 'change-me'),
         'NAME': os.getenv('POSTGRES_DB', 'change-me'),
-        'USER': os.getnev('POSTGRES_USER', 'change-me'),
+        'USER': os.getenv('POSTGRES_USER', 'change-me'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'change-me'),
         'HOST': os.getenv('POSTGRES_HOST', 'change-me'),
         'PORT': os.getenv('POSTGRES_PORT', 'change-me'),
